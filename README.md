@@ -1,4 +1,4 @@
-# 📝 Task Manager  
+# 📝 TaskFlow 
 
 A sleek **Task Manager** for adding, editing, deleting, and prioritizing tasks with **dark mode support** and **local storage**. 🚀  
 
