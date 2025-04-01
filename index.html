@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager - Boost Productivity</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Task Manager</h1>
+            <p class="subtitle">"Plan better, work smarter, and achieve more!"</p>
+            <div id="darkModeToggle">
+                <i class="fas fa-moon"></i> <span>Dark Mode</span>
+            </div>
+        </div>
+
+        <div class="task-input">
+            <h2>Add a New Task</h2>
+            <input type="text" id="taskTitle" placeholder="Task Title" />
+            <textarea id="taskDesc" placeholder="Task Description"></textarea>
+            <input type="date" id="dueDate" />
+            <select id="priority">
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+            </select>
+            <button id="addTaskBtn" onclick="addTask()">Add Task</button>
+            <button id="updateTaskBtn" onclick="updateTask()" style="display:none;">Update Task</button>
+        </div>
+
+        <h2 class="task-section-title">Your Tasks</h2>
+
+        <select id="filterTasks" onchange="displayTasks()">
+            <option value="all">All Tasks</option>
+            <option value="pending">Pending</option>
+            <option value="completed">Completed</option>
+        </select>
+
+        <ul id="taskList"></ul>
+
+        
+<div class="task-stats">
+    <div class="stat-item">
+        <i class="fas fa-tasks"></i>
+        <span id="totalTasks">0</span>
+        <small>Total</small>
+    </div>
+    <div class="stat-item">
+        <i class="fas fa-check-circle"></i>
+        <span id="completedTasks">0</span>
+        <small>Completed</small>
+    </div>
+    <div class="stat-item">
+        <i class="fas fa-hourglass-half"></i>
+        <span id="pendingTasks">0</span>
+        <small>Pending</small>
+    </div>
+</div>
+
+    </div>
+</body>
+</html>
